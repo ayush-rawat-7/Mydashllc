@@ -1,0 +1,189 @@
+@import "../../variables//variables.scss";
+$layout-breakpoint-sm: 600px;
+$layout-breakpoint-xs: 600px;
+$layout-breakpoint-lg: 960px;
+
+.container {
+    width: 97%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+    @media (max-width: $layout-breakpoint-lg) {
+        margin: 20px
+    }
+
+    @media (max-width: $layout-breakpoint-sm) {
+        flex-direction: column;
+    }
+
+
+    &__left {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(194, 222, 246, 0.233);
+
+        img {
+            border: none;
+        }
+
+        h2 {
+            margin-top: 10px;
+            color: rgba(10, 10, 10, 0.727);
+
+            @media (max-width: $layout-breakpoint-lg) {
+                font-size: 1.2rem;
+            }
+        }
+
+        p {
+            color: rgba(10, 10, 10, 0.388);
+            padding: 8px 10px;
+            text-align: center;
+
+            @media (max-width: $layout-breakpoint-lg) {
+                font-size: 0.8rem;
+            }
+        }
+
+        &__para {
+            padding: 0 20%;
+
+            @media (max-width: $layout-breakpoint-lg) {
+                padding: 0;
+            }
+        }
+    }
+
+    &__right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 0px 20px 20px 0px;
+        box-shadow: 0px 0px 2px 1px rgba(96, 95, 95, 0.56);
+
+        @media (max-width: $layout-breakpoint-sm) {
+            border-radius: 20px;
+
+        }
+
+        h2 {
+            margin: 40px 0px;
+            color: rgba(10, 10, 10, 0.727);
+
+            @media (max-width: $layout-breakpoint-lg) {
+                font-size: 1.3rem;
+                margin: 25px 0px 10px 0px;
+            }
+        }
+
+        form {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+
+            label {
+                color: rgba(128, 128, 128, 0.892);
+                margin: 7px 0px;
+
+                @media (max-width: $layout-breakpoint-lg) {
+                    font-size: 0.8rem;
+                }
+            }
+
+            .container__right_inputs {
+                @include inputType()
+            }
+
+            .phone {
+                width: 45%;
+
+                @media (max-width: $layout-breakpoint-lg) {
+                    width: 60%;
+                }
+            }
+
+            input[type=checkbox] {
+                clip: rect(0 0 0 0);
+                clip-path: inset(50%);
+                height: 1px;
+                overflow: hidden;
+                position: absolute;
+                white-space: nowrap;
+                width: 1px;
+            }
+
+            .checkbox {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-color: #fff;
+                border: 2px solid #ddd;
+                margin-right: 14px;
+
+                @media (max-width: $layout-breakpoint-lg) {
+                    margin-right: 7px;
+                }
+
+            }
+
+            .container__right_checkbox {
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                color: rgb(74, 74, 74);
+                padding: 0px 1px;
+
+                @media (max-width: $layout-breakpoint-lg) {
+                    font-size: 0.8rem;
+                }
+            }
+
+            .checkbox--checked {
+                border-color: $btnColor;
+            }
+
+            .container__right_button {
+                width: 35%;
+                height: 40px;
+                border: none;
+                color: #fff;
+                background-color: $btnColor;
+                border-radius: 7px;
+                font-size: 1rem;
+                margin-top: 10px;
+                margin-bottom: 60px;
+
+                &:hover {
+                    background-color: $hoverColor;
+                    cursor: pointer
+                }
+
+                @media (max-width: $layout-breakpoint-lg) {
+                    width: 60%;
+                    height: 35px;
+                }
+
+                @media (max-width: $layout-breakpoint-sm) {
+                    font-size: 1rem;
+                }
+            }
+
+            .container__right__error {
+                color: rgb(235, 92, 92);
+                font-size: 0.8rem;
+                font-weight: bold;
+
+                @media (max-width: $layout-breakpoint-lg) {
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+}

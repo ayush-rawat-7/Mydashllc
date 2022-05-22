@@ -1,0 +1,48 @@
+@import "../../variables//variables.scss";
+$layout-breakpoint-sm: 600px;
+$layout-breakpoint-xs: 600px;
+$layout-breakpoint-lg: 960px;
+
+.canvas {
+    width: 65%;
+    height: auto;
+    margin: auto;
+
+    @media (max-width: 1200px) {
+        width: 65%;
+    }
+    @media (max-width: $layout-breakpoint-lg) {
+        width: 80%;
+    }
+
+    @media (max-width: 750px) {
+        width: 100%;
+    }
+}
+
+.canvas__button {
+    width: 35%;
+    display: block;
+    height: 40px;
+    border: none;
+    color: #fff;
+    background-color: $btnColor;
+    border-radius: 7px;
+    font-size: 1rem;
+    margin: auto;
+
+    &:hover {
+        background-color: $hoverColor;
+        cursor: pointer
+    }
+
+    @media (max-width: $layout-breakpoint-lg) {
+        width: 30%;
+        height: 35px;
+    }
+
+    @media (max-width: $layout-breakpoint-sm) {
+        width: 30%;
+        font-size: 0.9rem;
+    }
+}

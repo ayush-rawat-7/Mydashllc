@@ -1,0 +1,18 @@
+$btnColor: rgb(49, 133, 223);
+$hoverColor: rgb(69, 149, 234);
+
+
+// mixins
+@mixin inputType {
+    border: none;
+    box-shadow: inset 0px 0px 2px 1px rgb(202, 195, 195);
+    border-radius: 2px;
+    height: 40px;
+    padding-left: 6px;
+    width: 74%;
+
+    @media (max-width: $layout-breakpoint-lg) {
+        width: 90%;
+        height: 30px;
+    }
+}
