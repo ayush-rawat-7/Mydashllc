@@ -16,6 +16,7 @@ $layout-breakpoint-lg: 960px;
 
     @media (max-width: $layout-breakpoint-sm) {
         flex-direction: column;
+        align-self: center;
     }
 
 
@@ -24,6 +25,8 @@ $layout-breakpoint-lg: 960px;
         width: 100%;
         flex-direction: column;
         justify-content: center;
+        border-radius: 20px 0px 0px 20px;
+
         align-items: center;
         background-color: rgba(194, 222, 246, 0.233);
 
